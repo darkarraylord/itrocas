@@ -215,9 +215,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'itrocas',
+      'database' => 'zadmin_itrocas',
       'username' => 'root',
-      'password' => '',
+      'password' => '12OfAd9c6bNDfcBV',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
