@@ -204,6 +204,7 @@ function drupal_install_profile_distribution_name() {
   else {
     $profile = drupal_get_profile();
     $info = system_get_info('module', $profile);
+	if ( ! array_key_exists('distribution_name', $info)) $info['distribution_name'] = 'Drupal';
     return $info['distribution_name'];
   }
 }

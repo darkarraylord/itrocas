@@ -215,9 +215,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'zadmin_itrocas',
+      'database' => 'itrocas',
       'username' => 'root',
-      'password' => '12OfAd9c6bNDfcBV',
+      'password' => '',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
@@ -256,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '1z2W9OeEr0cU8PHHZ_lK7sR9w17z-5VezgSTnqZvzu0';
+$drupal_hash_salt = 'y_vC4HWVr_zq4JsfF6W1g2peXHda6aOVg6ZyadfcS5E';
 
 /**
  * Base URL (optional).

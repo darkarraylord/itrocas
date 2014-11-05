@@ -27,17 +27,19 @@ function system_requirements($phase) {
     // is not running the default installation profile.
     $profile = drupal_get_profile();
     if ($profile != 'standard') {
-      $info = system_get_info('module', $profile);
-      $requirements['install_profile'] = array(
-        'title' => $t('Install profile'),
-        'value' => $t('%profile_name (%profile-%version)', array(
-          '%profile_name' => $info['name'],
-          '%profile' => $profile,
-          '%version' => $info['version']
-        )),
-        'severity' => REQUIREMENT_INFO,
-        'weight' => -9
-      );
+      $modules = module_list();
+      if (isset($modules[$profile])) {
+        $info = system_get_info('module', $profile);
+          $requirements['install_profile'] = array(
+            'title' => $t('Install profile'),
+            'value' => $t('%profile_name (%profile)', array(
+              '%profile_name' => $info['name'],
+              '%profile' => $profile,
+            )),
+            'severity' => REQUIREMENT_INFO,
+            'weight' => -9
+        );
+      }
     }
   }
 
@@ -203,7 +205,7 @@ function system_requirements($phase) {
     'value' => $memory_limit == -1 ? t('-1 (Unlimited)') : $memory_limit,
   );
 
-  if (!drupal_check_memory_limit(DRUPAL_MINIMUM_PHP_MEMORY_LIMIT, $memory_limit)) {
+  if ($memory_limit && $memory_limit != -1 && parse_size($memory_limit) < parse_size(DRUPAL_MINIMUM_PHP_MEMORY_LIMIT)) { 
     $description = '';
     if ($phase == 'install') {
       $description = $t('Consider increasing your PHP memory limit to %memory_minimum_limit to help prevent errors in the installation process.', array('%memory_minimum_limit' => DRUPAL_MINIMUM_PHP_MEMORY_LIMIT));

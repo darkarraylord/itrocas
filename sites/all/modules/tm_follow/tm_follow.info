@@ -1,0 +1,12 @@
+name = TM Follow Us
+description = Add sitewide and per user links to social network profiles.
+core = 7.x
+package = TM Follow
+files[] = tests/tm_follow.test
+config = admin/config/services/tm_follow
+
+; Information added by drupal.org packaging script on 2014-04-25
+version = "7.x-1.0"
+core = "7.x"
+project = "TM Follow"
+datestamp = "1397828896"

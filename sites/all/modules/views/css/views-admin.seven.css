@@ -20,6 +20,7 @@
 
 .views-ui-dialog fieldset {
   padding-top: 2.5em;
+  clear: both;
 }
 
 fieldset fieldset {

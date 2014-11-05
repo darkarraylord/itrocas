@@ -1,0 +1,4 @@
+filename = theme903
+description = "This template is made by <a href='http://template-help.com'>template-help.com</a>"
+modules = block addthis addthis_displays admin_devel aggregator block_class blog cctags colorbox comment contact contextual ctools date_api date_views demo dismiss field field_sql_storage field_ui file file_entity filter flexslider flexslider_fields flexslider_views flexslider_views_slideshow image jqeasing jquery_update libraries link list locale media media_internet media_vimeo media_youtube menu menu_block module_filter node number olark options panels path php poll rate retina_images search semanticviews shortcut simple_gmap statistics superfish system taxonomy term_reference_tree text tm_follow toolbar toolbar_admin_menu tracker trigger update user views_accordion views_isotope views_slideshow views_ui votingapi wysiwyg forum views panels_node page_manager admin_menu admin_menu_toolbar tipsy
+version = 1.1
